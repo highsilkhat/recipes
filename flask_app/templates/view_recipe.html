@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Recipe</title>
+</head>
+
+<style>
+    .main {
+
+        display: flex
+    }
+</style>
+<body>
+    <h1>Welcome, {{ session['first_name'] }}</h1>
+
+    <a href="/dashboard">Dashboard</a>
+    <a href="/logout">Logout</a>
+
+    <div class="card">
+            <div class="header">
+                <h2>{{ one_recipe.name }}</h2>
+            </div>
+            <div class="main">
+                <div class="left_col">
+                    <p>
+                        Description:
+                    </p>
+                    <p>
+                        Under 30 minutes:
+                    </p>
+                    <p>
+                        Instructions:
+                    </p>
+                    <p>
+                        Date Made:
+                    </p>
+                </div>
+                
+                <div class="right_col">
+
+                <p>
+                    {{ one_recipe.description}}
+                </p>
+
+                <p>
+                    {{ one_recipe.time}}
+                </p>
+
+                <p>
+                    {{ one_recipe.instructions }}
+                </p>
+
+                <p>
+                    {{ one_recipe.date }}
+                </p>
+                
+                </div>
+            </div>
+    </div>
+</body>
+</html>
